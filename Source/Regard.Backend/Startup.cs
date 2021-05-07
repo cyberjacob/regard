@@ -48,6 +48,8 @@ namespace Regard.Backend
                 services.AddDbContext<DataContext, SQLServerDataContext>();
             else if (Configuration.GetConnectionString("SQLite") != null)
                 services.AddDbContext<DataContext, SQLiteDataContext>();
+            else if (Configuration.GetConnectionString("Postgres") != null)
+                services.AddDbContext<DataContext, PostgreSQLDataContext>();
             else throw new ArgumentException("No supported database added!");
 
             // Messaging

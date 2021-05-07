@@ -6,4 +6,7 @@ dotnet ef migrations add %1 --context SQLServerDataContext --output-dir Migratio
 mkdir Migrations\SQLite
 dotnet ef migrations add %1 --context SQLiteDataContext --output-dir Migrations\SQLite
 
+mkdir Migrations\PostgreSQL
+dotnet ef migrations add %1 --context PostgreSQLDataContext --output-dir Migrations\PostgreSQL
+
 rem TODO: add for other DB types
